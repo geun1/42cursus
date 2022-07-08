@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 17:04:38 by gsong             #+#    #+#             */
-/*   Updated: 2022/07/08 15:02:24 by gsong            ###   ########.fr       */
+/*   Created: 2022/07/08 15:59:02 by gsong             #+#    #+#             */
+/*   Updated: 2022/07/08 16:41:38 by gsong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-size_t ft_strlen(char *s)
+
+
+void    *ft_memset(void *b, int c, size_t len)
 {
-    int i;
-    size_t count;
-    while (s[i])
+    size_t i;
+
+    i = 0;
+    while (i <= len)
     {
-        count++;
+        c = (char)c;
+        ((char *)b)[i] = c;
         i++;
     }
-    return (count);
+    return(b);
+}
+#include<stdio.h>
+int main(){
+    char* res;
+    char a[10] = "asdfasdfdd";
+    res = ft_memset(a,'z',4);
+    printf("%s",res);
 }

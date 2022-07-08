@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 17:04:38 by gsong             #+#    #+#             */
-/*   Updated: 2022/07/08 15:02:24 by gsong            ###   ########.fr       */
+/*   Created: 2022/07/08 17:36:48 by gsong             #+#    #+#             */
+/*   Updated: 2022/07/08 17:57:42 by gsong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-size_t ft_strlen(char *s)
+char *ft_strchr(const char *s, int c)
 {
     int i;
-    size_t count;
+    
+    i = 0;
     while (s[i])
     {
-        count++;
-        i++;
+        if (s[i] == c)
+            return (&s[i]);
+        else
+            i++;
     }
-    return (count);
+    return 0;
+}
+#include<stdio.h>
+int main()
+{
+    printf("%s",ft_strchr("abcdefg",'e'));
 }
