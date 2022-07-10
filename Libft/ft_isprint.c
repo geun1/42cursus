@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
+/*   By: song-geun-il <song-geun-il@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 16:52:51 by gsong             #+#    #+#             */
-/*   Updated: 2022/07/06 17:04:24 by gsong            ###   ########.fr       */
+/*   Updated: 2022/07/10 18:46:45 by song-geun-i      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int ft_isprint(int c)
 {

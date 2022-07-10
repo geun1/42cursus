@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
+/*   By: song-geun-il <song-geun-il@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 15:59:02 by gsong             #+#    #+#             */
-/*   Updated: 2022/07/08 16:41:38 by gsong            ###   ########.fr       */
+/*   Updated: 2022/07/10 18:47:29 by song-geun-i      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-
-void    *ft_memset(void *b, int c, size_t len)
+void *ft_memset(void *b, int c, size_t len)
 {
     size_t i;
 
@@ -23,12 +23,5 @@ void    *ft_memset(void *b, int c, size_t len)
         ((char *)b)[i] = c;
         i++;
     }
-    return(b);
-}
-#include<stdio.h>
-int main(){
-    char* res;
-    char a[10] = "asdfasdfdd";
-    res = ft_memset(a,'z',4);
-    printf("%s",res);
+    return (b);
 }

@@ -3,17 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
+/*   By: song-geun-il <song-geun-il@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:36:48 by gsong             #+#    #+#             */
-/*   Updated: 2022/07/08 17:57:42 by gsong            ###   ########.fr       */
+/*   Updated: 2022/07/10 18:47:42 by song-geun-i      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char *ft_strchr(const char *s, int c)
 {
     int i;
-    
+
     i = 0;
     while (s[i])
     {
@@ -23,9 +25,4 @@ char *ft_strchr(const char *s, int c)
             i++;
     }
     return 0;
-}
-#include<stdio.h>
-int main()
-{
-    printf("%s",ft_strchr("abcdefg",'e'));
 }

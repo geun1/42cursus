@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
+/*   By: song-geun-il <song-geun-il@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 16:44:43 by gsong             #+#    #+#             */
-/*   Updated: 2022/07/06 16:45:33 by gsong            ###   ########.fr       */
+/*   Updated: 2022/07/10 18:46:41 by song-geun-i      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int ft_digit(int c)
 {
-    if ('0'<= c && c <= '9')
+    if ('0' <= c && c <= '9')
         return (1);
     else
         return (0);

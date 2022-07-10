@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
+/*   By: song-geun-il <song-geun-il@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 17:04:38 by gsong             #+#    #+#             */
-/*   Updated: 2022/07/08 15:02:24 by gsong            ###   ########.fr       */
+/*   Updated: 2022/07/10 18:47:49 by song-geun-i      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
+
 size_t ft_strlen(char *s)
 {
     int i;

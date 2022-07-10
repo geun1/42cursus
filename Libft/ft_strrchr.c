@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
+/*   By: song-geun-il <song-geun-il@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 18:00:24 by gsong             #+#    #+#             */
-/*   Updated: 2022/07/08 18:07:33 by gsong            ###   ########.fr       */
+/*   Updated: 2022/07/10 18:48:18 by song-geun-i      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char *ft_strrchr(const char *s, int c)
 {
@@ -26,8 +28,3 @@ char *ft_strrchr(const char *s, int c)
     }
     return 0;
 }
-// #include<stdio.h>
-// int main()
-// {
-//     printf("%s",ft_strrchr("abcdefabcdbbbaef",'a'));
-// }

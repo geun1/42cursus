@@ -3,23 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
+/*   By: song-geun-il <song-geun-il@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:19:50 by gsong             #+#    #+#             */
-/*   Updated: 2022/07/08 17:27:09 by gsong            ###   ########.fr       */
+/*   Updated: 2022/07/10 18:49:14 by song-geun-i      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int  c)
+#include "libft.h"
+
+int ft_toupper(int c)
 {
     if ('a' <= c && c <= 'z')
         c -= 32;
-        return (c);
+    return (c);
 }
-/*
-#include<stdio.h>
-int main()
-{
-    printf("%c",ft_toupper('a'));
-}
-*/
