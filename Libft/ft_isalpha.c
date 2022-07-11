@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: song-geun-il <song-geun-il@student.42.f    +#+  +:+       +#+        */
+/*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 18:46:27 by song-geun-i       #+#    #+#             */
-/*   Updated: 2022/07/10 18:46:32 by song-geun-i      ###   ########.fr       */
+/*   Updated: 2022/07/11 15:14:22 by gsong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    if (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))
-        return (1);
-    else
-        return (0);
+	if (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))
+		return (1);
+	else
+		return (0);
 }

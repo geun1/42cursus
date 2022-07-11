@@ -3,28 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: song-geun-il <song-geun-il@student.42.f    +#+  +:+       +#+        */
+/*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 18:00:24 by gsong             #+#    #+#             */
-/*   Updated: 2022/07/10 18:48:18 by song-geun-i      ###   ########.fr       */
+/*   Updated: 2022/07/11 21:51:31 by gsong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i])
-        i++;
-    while (i > 0)
-    {
-        if (s[i] == c)
-            return (&s[i]);
-        else
-            i--;
-    }
-    return 0;
+	i = 0;
+	while (s[i])
+		i++;
+	if (c == '\0')
+		return ((char *) &s[i]);
+	while (--i >= 0)
+	{
+		if (s[i] == c)
+			return ((char *) &s[i]);
+	}
+	return (0);
 }

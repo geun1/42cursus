@@ -3,17 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: song-geun-il <song-geun-il@student.42.f    +#+  +:+       +#+         #
+#    By: gsong <gsong@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/10 18:39:19 by song-geun-i       #+#    #+#              #
-#    Updated: 2022/07/10 19:06:53 by song-geun-i      ###   ########.fr        #
+#    Updated: 2022/07/11 19:49:40 by gsong            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME					= libft.a
 
-SRCS					= 
-					ft_isalnum.c \
+SRCS					= ft_isalnum.c \
 					ft_isalpha.c \
 					ft_isascii.c \
 					ft_isdigit.c \
@@ -27,8 +26,6 @@ SRCS					=
 
 OBJS					= $(SRCS:%.c=%.o)
 
-BNS_OBJS				= $(BNS_SRCS:%.c=%.o)
-
 FLAGS					= -Wall -Wextra -Werror
 
 $(NAME)		:	$(OBJS)
@@ -38,7 +35,7 @@ $(NAME)		:	$(OBJS)
 all	:	$(NAME)
 
 clean	:
-		rm -f $(OBJS) $(BNS_OBJS)
+		rm -f $(OBJS)
 
 fclean	:	clean
 		rm -f $(NAME)

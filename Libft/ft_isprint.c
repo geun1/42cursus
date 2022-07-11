@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: song-geun-il <song-geun-il@student.42.f    +#+  +:+       +#+        */
+/*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 16:52:51 by gsong             #+#    #+#             */
-/*   Updated: 2022/07/10 18:46:45 by song-geun-i      ###   ########.fr       */
+/*   Updated: 2022/07/11 20:36:23 by gsong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c <= 31 || c == 128)
-        return (0);
-    else
-        return (1);
+	if (32 <= c && c <= 126)
+		return (1);
+	else
+		return (0);
 }

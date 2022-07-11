@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: song-geun-il <song-geun-il@student.42.f    +#+  +:+       +#+        */
+/*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 18:48:25 by song-geun-i       #+#    #+#             */
-/*   Updated: 2022/07/10 18:49:02 by song-geun-i      ###   ########.fr       */
+/*   Updated: 2022/07/11 17:25:05 by gsong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
+	if ('A' <= c && c <= 'Z')
+		c += 32;
+	return (c);
 }
