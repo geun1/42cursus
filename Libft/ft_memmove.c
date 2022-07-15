@@ -6,7 +6,7 @@
 /*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 16:34:54 by gsong             #+#    #+#             */
-/*   Updated: 2022/07/12 17:09:37 by gsong            ###   ########.fr       */
+/*   Updated: 2022/07/15 14:27:16 by gsong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,21 @@ void	*ft_memmove(void	*dst, const void	*src, size_t	len)
 {
 	size_t	i;
 
-	i = -1;
-	if (dst == src)
-		return (dst);
-	while (++i < len)
-		)dst = src;
+	if (dst == NULL && src == NULL)
+		return (NULL);
+	if (dst < src)
+	{
+		i = -1;
+		while (++i < len)
+		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+	}
+	else
+	{
+		i = len + 1;
+		while (--i)
+		{
+			((unsigned char *) dst)[i - 1] = ((unsigned char *) src)[i - 1];
+		}
+	}
 	return (dst);
 }
-
-
-	src =	ㅁㅁㅁㅁ
-			0 1 2 3
-	dest = 	ㅁㅁㅁㅁ
-			 0 1 2
-
-	memcpy()
-
-			ㅁㅁㅁㅁ
-			 0 1 2 
-
-	dest = src + 1
-	 if (src < dest)
-
-	 1. idx = strlen(src)
-
-	 while (idx --)
-	  dest[] = src[];
