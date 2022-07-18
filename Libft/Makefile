@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gsong <gsong@student.42.fr>                +#+  +:+       +#+         #
+#    By: song-geun-il <song-geun-il@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/10 18:39:19 by song-geun-i       #+#    #+#              #
-#    Updated: 2022/07/15 18:54:09 by gsong            ###   ########.fr        #
+#    Updated: 2022/07/18 15:45:59 by song-geun-i      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,9 @@ SRCS					= ft_isalnum.c \
 					ft_memcmp.c \
 					ft_strnstr.c \
 					ft_calloc.c \
-					ft_strdup.c
+					ft_strdup.c \
+					ft_atoi.c \
+					ft_substr.c 
 OBJS					= $(SRCS:%.c=%.o)
 
 FLAGS					= -Wall -Wextra -Werror
