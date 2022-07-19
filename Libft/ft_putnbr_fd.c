@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/12 13:56:20 by gsong             #+#    #+#             */
-/*   Updated: 2022/07/18 17:58:43 by gsong            ###   ########.fr       */
+/*   Created: 2022/07/19 22:01:44 by gsong             #+#    #+#             */
+/*   Updated: 2022/07/19 22:09:55 by gsong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-size_t	ft_strlcpy(char	*dst, const	char	*src, size_t	dstsize)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
-	size_t	temp;
+	int	i;
+	int	arr[10];
 
-	i = 0;
-	temp = ft_strlen(src);
-	if (!src)
-		return (0);
-	if (dstsize)
+	if (n == -2147483648)
 	{
-		while (src[i] && i < dstsize - 1)
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
+		write(fd, "-2147483648", 11);
+		return ;
 	}
-	return (temp);
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n *= -1;
+	}
+	i = 0;
+	while (n >= 10)
+	{
+		arr[i++] = n % 10 + '0';
+		n /= 10;
+	}
+	arr[i] = n + '0';
+	while (i >= 0)
+		ft_putchar_fd(arr[i--], fd);
 }

@@ -1,0 +1,5 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/gsong/Desktop/libft0718/Libft'
+make: `libft.a' is up to date.
+make: Leaving directory `/Users/gsong/Desktop/libft0718/Libft'
+ 

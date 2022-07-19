@@ -6,7 +6,7 @@
 /*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:36:48 by gsong             #+#    #+#             */
-/*   Updated: 2022/07/11 21:33:27 by gsong            ###   ########.fr       */
+/*   Updated: 2022/07/18 20:24:29 by gsong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (c == '\0')
 		return ((char *)s);
-	return (0);
+	return (NULL);
 }
