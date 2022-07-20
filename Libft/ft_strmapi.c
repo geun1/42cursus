@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: song-geun-il <song-geun-il@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/15 14:44:22 by gsong             #+#    #+#             */
-/*   Updated: 2022/07/20 18:22:52 by song-geun-i      ###   ########.fr       */
+/*   Created: 2022/07/20 16:49:57 by song-geun-i       #+#    #+#             */
+/*   Updated: 2022/07/20 18:18:06 by song-geun-i      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t src_i;
-	size_t dst_i;
-	size_t src_len;
-	size_t dst_len;
+    char *result;
+    int i;
 
-	src_len = ft_strlen(src);
-	dst_len = ft_strlen(dst);
-	src_i = 0;
-	dst_i = dst_len;
-	if (dstsize <= dst_len)
-		return (src_len + dstsize);
-	while (src[src_i] && dst_i < dstsize - 1)
-		dst[dst_i++] = src[src_i++];
-	dst[dst_i] = '\0';
-	return (src_len + dst_len);
+    i = 0;
+    result = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+    if (!result)
+        return (NULL);
+    while (s[i])
+    {
+        result[i] = f(i, s[i]);
+        i++;
+    }
+    result[i] = 0;
+    return (result);
 }
