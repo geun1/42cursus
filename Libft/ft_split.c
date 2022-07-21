@@ -6,7 +6,7 @@
 /*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 20:49:09 by gsong             #+#    #+#             */
-/*   Updated: 2022/07/19 20:30:27 by gsong            ###   ########.fr       */
+/*   Updated: 2022/07/21 20:14:53 by gsong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	count = count_word(s, c);
-	result = (char **) malloc(sizeof(char *) * count + 1);
+	result = (char **) malloc(sizeof(char *) * (count + 1));
 	if (!result)
 		return (NULL);
 	while (i < count)

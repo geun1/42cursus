@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: song-geun-il <song-geun-il@student.42.f    +#+  +:+       +#+         #
+#    By: gsong <gsong@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/10 18:39:19 by song-geun-i       #+#    #+#              #
-#    Updated: 2022/07/20 18:18:30 by song-geun-i      ###   ########.fr        #
+#    Updated: 2022/07/21 20:43:53 by gsong            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,19 +44,30 @@ SRCS					= ft_isalnum.c \
 					ft_putendl_fd.c \
 					ft_putnbr_fd.c \
 					ft_itoa.c \
-					ft_strmapi.c
+					ft_strmapi.c 
+
+BNS_SRCS				= ft_lstnew.c \
+					ft_lstsize.c \
+					ft_lstlast.c 
+
 OBJS					= $(SRCS:%.c=%.o)
+
+BNS_OBJS				= $(BNS_SRCS:%.c=%.o)
 
 FLAGS					= -Wall -Wextra -Werror
 
 $(NAME)		:	$(OBJS)
-			cc $(FLAGS) -c $(SRCS) -I./
+			gcc $(FLAGS) -c $(SRCS) -I./
 			ar rc $(NAME) $(OBJS)
 
 all	:	$(NAME)
 
+bonus	:	$(NAME)
+		gcc $(FLAGS) -c $(BNS_SRCS) -I./
+		ar rc $(NAME) $(BNS_OBJS)
+
 clean	:
-		rm -f $(OBJS)
+		rm -f $(OBJS) $(BNS_OBJS)
 
 fclean	:	clean
 		rm -f $(NAME)
