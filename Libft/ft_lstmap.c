@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/18 15:37:02 by song-geun-i       #+#    #+#             */
-/*   Updated: 2022/07/22 18:17:45 by gsong            ###   ########.fr       */
+/*   Created: 2022/07/22 16:51:03 by gsong             #+#    #+#             */
+/*   Updated: 2022/07/22 17:02:28 by gsong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include"libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*tmp;
-	int		i;
+	t_list	*result;
+	t_list	*node;
 
-	i = 0;
-	if (((size_t)start < ft_strlen(s)))
+	if (!lst || !f)
+		return (NULL);
+	result = NULL;
+	while (lst)
 	{
-		if (len > ft_strlen(s))
-			len = ft_strlen(s);
-		tmp = (char *)malloc(sizeof(char) * (len + 1));
-		if (! tmp)
+		node = ft_lstnew(f(lst->content));
+		if (!node)
+		{
+			ft_lstclear(&node, del);
 			return (NULL);
-		while (len-- && s[start])
-			tmp[i++] = s[start++];
+		}
+		ft_lstadd_back(&result, node);
+		lst = lst->next;
 	}
-	else
-		tmp = (char *)malloc(sizeof(char));
-	tmp[i] = '\0';
-	return (tmp);
+	node = NULL;
+	return (result);
 }

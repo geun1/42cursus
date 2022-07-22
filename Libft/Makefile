@@ -6,7 +6,7 @@
 #    By: gsong <gsong@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/10 18:39:19 by song-geun-i       #+#    #+#              #
-#    Updated: 2022/07/21 20:43:53 by gsong            ###   ########.fr        #
+#    Updated: 2022/07/22 17:15:45 by gsong            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,11 +44,18 @@ SRCS					= ft_isalnum.c \
 					ft_putendl_fd.c \
 					ft_putnbr_fd.c \
 					ft_itoa.c \
-					ft_strmapi.c 
+					ft_strmapi.c \
+					ft_lstadd_back.c \
+					ft_striteri.c
 
 BNS_SRCS				= ft_lstnew.c \
 					ft_lstsize.c \
-					ft_lstlast.c 
+					ft_lstlast.c \
+					ft_lstadd_front.c \
+					ft_lstdelone.c \
+					ft_lstclear.c \
+					ft_lstiter.c \
+					ft_lstmap.c
 
 OBJS					= $(SRCS:%.c=%.o)
 

@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsong <gsong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/18 15:37:02 by song-geun-i       #+#    #+#             */
-/*   Updated: 2022/07/22 18:17:45 by gsong            ###   ########.fr       */
+/*   Created: 2022/07/22 16:45:27 by gsong             #+#    #+#             */
+/*   Updated: 2022/07/22 16:50:48 by gsong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include"libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	char	*tmp;
-	int		i;
-
-	i = 0;
-	if (((size_t)start < ft_strlen(s)))
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		if (len > ft_strlen(s))
-			len = ft_strlen(s);
-		tmp = (char *)malloc(sizeof(char) * (len + 1));
-		if (! tmp)
-			return (NULL);
-		while (len-- && s[start])
-			tmp[i++] = s[start++];
+		(*f)(lst->content);
+		lst = lst->next;
 	}
-	else
-		tmp = (char *)malloc(sizeof(char));
-	tmp[i] = '\0';
-	return (tmp);
 }
